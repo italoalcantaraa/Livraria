@@ -5,8 +5,6 @@ import java.sql.SQLException;
 
 import com.mysql.jdbc.PreparedStatement;
 
-import controller.Livro;
-
 public class LivrosModel {
 	Connection con;
 	PreparedStatement pstm;

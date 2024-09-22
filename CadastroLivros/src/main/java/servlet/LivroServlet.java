@@ -1,6 +1,6 @@
 package servlet;
 
-import java.io.Console;
+import model.Livro;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import controller.Livro;
 import model.LivrosModel;
+
 
 @WebServlet("/LivroServlet")
 public class LivroServlet extends HttpServlet {
@@ -40,7 +40,7 @@ public class LivroServlet extends HttpServlet {
 			
 			double precoToDouble = Double.parseDouble(preco);
 			
-			Livro livro = new Livro(nome,img,descricao,categoria, precoToDouble);
+			Livro livro = new Livro(nome, img, descricao, categoria, precoToDouble);
 			
 			LivrosModel conexao = new LivrosModel();
 			conexao.cadastrarLivro(livro);
@@ -50,8 +50,6 @@ public class LivroServlet extends HttpServlet {
 			categoria = null;
 			img = null;
 			descricao = null;
-			
-			System.out.print("ErroAquidsdasdadsadasasdsa");
 			request.getRequestDispatcher("home/Home.jsp").forward(request, response);
 
 		}catch(Exception e) {
