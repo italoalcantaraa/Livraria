@@ -21,7 +21,7 @@ body {
 
 .conteudo_form {
 	width: 100%;
-	
+		
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -125,7 +125,7 @@ padding-bottom: 50px;
 				</select>
 				<input name="url" placeholder="URL da imagem">
 			</div>
-			<textarea name="descricao" minlength=20  maxlength=255 placeholder="Descrição"></textarea>
+			<textarea name="descricao" minlength	1 maxlength=255 placeholder="Descrição"></textarea>
 			<input type="submit" value="Adicionar livro" id="adicionar">
 			<p style="color: red; font-weight: bold">
 					<% 
